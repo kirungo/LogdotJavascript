@@ -20,8 +20,8 @@ console.log(`\n`);
 
 // continue with the loop when you encounter strings
 console.log(`--- ONLY STRINGS ---`)
-for(let i = 0; i < markArray.length; i++){
-	if(typeof markArray[i] !== `string`) continue;
+for (let i = 0; i < markArray.length; i++) {
+	if (typeof markArray[i] !== `string`) continue;
 	console.log(markArray[i], typeof markArray[i]);
 }
 
@@ -30,8 +30,8 @@ console.log(`\n`);
 
 // break from the loop when you encounter numbers
 console.log(`--- BREAK WITH NUMBERS ---`)
-for(let i = 0; i < markArray.length; i++){
-	if(typeof markArray[i] !== `number`) break;
+for (let i = 0; i < markArray.length; i++) {
+	if (typeof markArray[i] !== `number`) break;
 	console.log(markArray[i], typeof markArray[i]);
 }
 
@@ -48,7 +48,7 @@ console.log(`\n`);
 const years = [1991, 2007, 1969, 2020];
 const ages = [];
 
-for (let currentAge = 0; currentAge < years.length; currentAge ++ ){
+for (let currentAge = 0; currentAge < years.length; currentAge++) {
 	ages.push(2026 - years[currentAge]);
 }
 console.log(ages);
@@ -66,6 +66,15 @@ const nancy = [
 ];
 
 // Loop backwards
-for(let i = nancy.length - 1; i >= 0; i--){
+for (let i = nancy.length - 1; i >= 0; i--) {
 	console.log(i, nancy[i]);
 };
+
+// Loop inside a loop
+for (let exercise = 1; exercise < 4; exercise++) {
+	console.log(`----- Starting exercise ${exercise} -----`);
+
+	for (let rep = 1; rep < 6; rep++) {
+		console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
+	}
+}
