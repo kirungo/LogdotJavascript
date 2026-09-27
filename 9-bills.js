@@ -23,9 +23,19 @@ let totals = [];
  * for(start, range to loop, action)
 */
 for (let i = 0; i < bills.length; i++) {
-    let totalBill = calcTip(bills[i]) + bills[i];
+    let totalBill = bills[i] + tips[i];
     totals.push(totalBill);
     console.log(`Your total bill is ${totalBill}`);
 }
 
 console.log(`\n`);
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for(let y = 0; y < arr.length; y++){
+        sum = sum + arr[y];
+    }
+    let averageSum = sum / arr.length;
+    return averageSum;
+    }
+console.log(`The average of all the total bills is ${calcAverage(totals)}`);
