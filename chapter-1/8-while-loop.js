@@ -15,3 +15,4 @@ while(dice !== 6){
         console.log(`Loop is about to end...`);
 
     }
+}
