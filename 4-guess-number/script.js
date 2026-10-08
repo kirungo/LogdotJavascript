@@ -7,13 +7,17 @@ const guessInput = document.querySelector('.guess');
 const checkButton = document.querySelector('.check');
 const againButton = document.querySelector('.again');
 const scoreTag = document.querySelector('.score');
+const bodyTag = document.querySelector('body');
+const highScoreTag = document.querySelector('.highscore');
 
 // Create a random game number
 let gameNumber = Math.trunc(Math.random() * 20) + 1;
-number.textContent = gameNumber;
 
 // Set the value of the score
 let score = 20;
+
+// Set the value of the high score
+let highScore = 0;
 
 /**
  * addEventListener(
@@ -27,11 +31,22 @@ checkButton.addEventListener('click', function () {
   // When there is no input
   if (!guess) {
     message.textContent = '🔞 No Number given!';
+    bodyTag.style.backgroundColor = '#1f1e1e';
 
     // When player wins
   } else if (guess === gameNumber) {
     message.textContent = '🎉 Correct Number!';
+    
+    // When manipulating a style we always need to put it as a string
+    bodyTag.style.backgroundColor = '#60b347';
+    number.style.width = '15rem';
     number.textContent = gameNumber;
+
+    // Update high score only if the current score is higher
+    if (score > highScore) {
+      highScore = score;
+      highScoreTag.textContent = highScore;
+    }
   } else if (score > 1) {
     score = score - 1;
     scoreTag.textContent = score;
@@ -59,5 +74,7 @@ againButton.addEventListener('click', function () {
   message.textContent = 'Start guessing...';
   number.textContent = '?';
   guessInput.value = '';
+  bodyTag.style.backgroundColor = '#222';
+  number.style.width = '15rem';
   scoreTag.textContent = score;
 });
