@@ -25,3 +25,13 @@ const close = function () {
 // Now call the function along the event listener
 closeModal.addEventListener('click', close);
 overlay.addEventListener('click', close);
+
+// How to respond to keyboard event a.k.a global events like clicking esc
+document.addEventListener('keydown', function (keyTouched) {
+  console.log(`${keyTouched.key} was pressed.`);
+
+  if (keyTouched.key === 'Escape' && !modal.classList.contains('hidden')) {
+    console.log('ESC key was pressed');
+    close();
+  }
+});
