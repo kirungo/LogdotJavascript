@@ -8,7 +8,7 @@ console.log(showModal);
 
 for (let currentItem = 0; currentItem < showModal.length; currentItem++) {
   showModal[currentItem].addEventListener('click', function () {
-    console.log('Button clicked');
+    console.log('Show Modal Button clicked');
     // Passing in the name of the class we don't use the .
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
