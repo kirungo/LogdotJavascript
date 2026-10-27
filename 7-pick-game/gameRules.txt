@@ -1,0 +1,42 @@
+1. Roll the dice: The active player rolls one die. If they roll 2, 3, 4, 5, or 6, that value is added to their current score.
+
+
+
+
+
+
+
+
+
+2. If you roll a 1
+
+Your current score resets to zero, and your turn ends. Any points accumulated during that turn are lost.
+
+
+
+
+
+
+
+
+
+
+
+
+3. Decide whether to roll again
+
+After rolling 2 to 6, you can keep rolling to accumulate more points, but risk losing your current turn's points if you roll a 1.
+
+
+
+
+4. Hold
+
+Add your current score to your total score. Your current score resets to zero, and the other player takes their turn.
+
+
+
+
+5. Win the game
+
+The first player to reach 100 points wins.
