@@ -13,7 +13,7 @@ let player1CurrentScore = document.querySelector('#current-1');
 // Current player identifier
 let activePlayer = document.querySelector('.player-active');
 
-// Dice Game Identifiers
+// Dice Game Buttons Identifiers
 const dice = document.querySelectorAll('.btn');
 const newGameButton = document.querySelector('.btn-new');
 const rollDiceButton = document.querySelector('.btn-roll');
